@@ -24,8 +24,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <title>VoroMesh</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -52,21 +52,24 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">VoroMesh: Learning Watertight Surface Meshes with Voronoi Diagrams</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://nissmar.github.io" target="_blank">Nissim Maruani</a><sup>1</sup>, </span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Roman Klokov</a><sup>2</sup>, </span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Maks Ovsjanikov</a><sup>2</sup>,</span>
+                    <span class="author-block">
+                      <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Pierre Alliez</a><sup>1</sup>, </span>
+                      <span class="author-block">
+                        <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Mathieu Desbrun</a><sup>2</sup>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block"><sup>1</sup>Inria, <sup>2</sup>Ecole polytechnique  <br>ICCV 2023</span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -122,156 +125,117 @@
   </div>
 </section>
 
-
-<!-- Teaser video-->
+<!-- Teaser Image -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
+      <img src="static/images/paper_figure2.png" alt="MY ALT TEXT"/>
     </div>
   </div>
-</section>
-<!-- End teaser video -->
+</section> 
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
+        
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
+            In sharp contrast to images, finding a concise, learnable discrete representation of 3D surfaces remains a scientific challenge. In particular, while polygon meshes are arguably the most common surface representation used in geometry processing tools, their irregular and combinatorial structure often makes them unsuitable for learning-based applications.
+            In this work we present a novel and differentiable Voronoi-based representation of watertight 3D shape surfaces. 
+            From a set of 3D points (called generators) and their associated occupancy (inside/outside) with respect to an input shape, we define our boundary representation through the Voronoi diagram of the generators as the subset of Voronoi faces whose two equidistant generators are of opposite occupancy: the resulting polygon mesh then forms a watertight approximation of the input shape's boundary.To learn the position of the generators we propose a novel loss function that minimizes the distance from groundtruth surface samples to the closest face of the Voronoi diagram without needing an explicit construction of the entire Voronoi diagram. We demonstrate how the proposed VoroLoss applies to either direct optimization of generators, or to the training of a neural network for inference-based prediction of generators. We demonstrate the geometric efficiency of our representation compared to axiomatic meshing algorithms and recent learning-based mesh representations on the Thingi32 dataset. We also match or outperform recent methods in mesh prediction from SDF inputs on the ABC dataset, while guaranteeing closed surfaces without self-intersection.          </p>
         </div>
+        <video controls='true' width="1920" height="1080">
+          <source src="./static/video/teaser.m4v" type="video/x-m4v">
+          <!-- <source src="./static/video/teaser.mp4"  type="video/mp4"> -->
+        </video>
       </div>
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
+<!-- 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of the document</title>
+  </head>
+  <body>
+    <video width="320" height="240" controls autoplay>
+      <source src=”http://techslides.com/demos/sample-videos/small.ogv” type=video/ogg>
+      <source src="/build/videos/arcnet.io(7-sec).mp4" type=video/mp4>
+    </video>
+    <p><strong>Note:</strong> The autoplay attribute will not work on some mobile devices.</p>
+  </body>
+</html> -->
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
+<!-- Direct optim -->
+<section class="section">
+  <div class="container is-max-desktop is-four-fifths">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
+    <h2 class="title is-3">Direct Optimisation (Thingi32 dataset)</h2>
+    <table class="table">
+      <tr>
+        <td><img class="tabimg" src="static/images/direct/32_dino.jpeg" alt="Image 1"></td>
+        <td><img class="tabimg" src="static/images/direct/64_dino.jpeg" alt="Image 2"></td>
+        <td><img class="tabimg" src="static/images/direct/128_dino.jpeg" alt="Image 2"></td>
+        <td><img class="tabimg" src="static/images/direct/dino.jpeg" alt="Image 2"></td>
+      </tr>
+      <tr>
+        <td><img class="tabimg" src="static/images/direct/32_lucy.jpeg" alt="Image 1"></td>
+        <td><img class="tabimg" src="static/images/direct/64_lucy.jpeg" alt="Image 2"></td>
+        <td><img class="tabimg" src="static/images/direct/128_lucy.jpeg" alt="Image 2"></td>
+        <td><img class="tabimg" src="static/images/direct/lucy.jpeg" alt="Image 2"></td>
+      </tr>
+      <tr>
+        <td><img class="tabimg" src="static/images/direct/32_gargoyle.jpeg" alt="Image 1"><h2 class="subtitle has-text-centered">VoroMesh (32)</h2></td>
+        <td><img class="tabimg" src="static/images/direct/64_gargoyle.jpeg" alt="Image 2"><h2 class="subtitle has-text-centered">VoroMesh (64)</h2></td>
+        <td><img class="tabimg" src="static/images/direct/128_gargoyle.jpeg" alt="Image 2"><h2 class="subtitle has-text-centered">VoroMesh (128)</h2></td>
+        <td><img class="tabimg" src="static/images/direct/gargoyle.jpeg" alt="Image 2"><h2 class="subtitle has-text-centered">Ground Truth</h2></td>
+      </tr>
+    </table>
   </div>
 </div>
-</div>
 </section>
-<!-- End image carousel -->
 
 
 
 
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
+<!-- Learning ABC -->
+<!-- <section class="section">
+  <div class="container is-max-desktop is-four-fifths">
     <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
+    <h2 class="title is-3">Learning Pipeline</h2>
+   <img class="tabimg" src="static/images/CNN3.svg" alt="Image 1" style="width: 5°0%; height: 100%;">
+  </div>
+  </div>
+</section> -->
+
+
+
+<!-- Learning ABC -->
+<section class="section">
+  <div class="container is-max-desktop is-four-fifths">
+    <div class="container">
+    <h2 class="title is-3">Learning-based reconstruction (ABC dataset)</h2>
+    <table class="table">
+      <tr>
+        <td><img class="tabimg" src="static/images/learning/8NDC.jpeg" alt="Image 1"></td>
+        <td><img class="tabimg" src="static/images/learning/8NMC.jpeg" alt="Image 2"></td>
+        <td><img class="tabimg" src="static/images/learning/8ours.jpeg" alt="Image 2"></td>
+        <td><img class="tabimg" src="static/images/learning/8gt.jpeg" alt="Image 2"></td>
+      </tr>
+      <tr>
+        <td><img class="tabimg" src="static/images/learning/1NDC.jpeg" alt="Image 1"><h2 class="subtitle has-text-centered">NDC</h2></td>
+        <td><img class="tabimg" src="static/images/learning/1NMC.jpeg" alt="Image 2"><h2 class="subtitle has-text-centered">NMC</h2></td>
+        <td><img class="tabimg" src="static/images/learning/1ours.jpeg" alt="Image 2"><h2 class="subtitle has-text-centered">VoroMesh</h2></td>
+        <td><img class="tabimg" src="static/images/learning/1gt.jpeg" alt="Image 2"><h2 class="subtitle has-text-centered">Ground Truth</h2></td>
+      </tr>
+    </table>
   </div>
 </section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
 
 
 <!--BibTex citation -->
@@ -301,6 +265,8 @@
     </div>
   </div>
 </footer>
+
+
 
 <!-- Statcounter tracking code -->
   
