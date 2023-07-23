@@ -20,7 +20,7 @@
   <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="keywords" content="VoroMesh learning reconstruction">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -69,7 +69,7 @@
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block"><sup>1</sup>Inria, <sup>2</sup>Ecole polytechnique  <br>ICCV 2023</span>
+                    <span class="author-block"><sup>1</sup>Inria, <sup>2</sup>École polytechnique  <br>ICCV 2023</span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -108,7 +108,7 @@
                 </span>
 
                 <!-- ArXiv abstract Link -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -116,7 +116,7 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
+              </span> -->
             </div>
           </div>
         </div>
@@ -129,7 +129,13 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="static/images/paper_figure2.png" alt="MY ALT TEXT"/>
+    <picture>
+      <source media="(min-width: 769px)" srcset="static/images/banner.png">
+      <source media="(max-width: 769px)" srcset="static/images/banner_mobile.png">
+
+      <img src="static/images/banner.png" alt="MY ALT TEXT"/>
+
+    </picture>
     </div>
   </div>
 </section> 
@@ -145,12 +151,13 @@
           <p>
             In sharp contrast to images, finding a concise, learnable discrete representation of 3D surfaces remains a scientific challenge. In particular, while polygon meshes are arguably the most common surface representation used in geometry processing tools, their irregular and combinatorial structure often makes them unsuitable for learning-based applications.
             In this work we present a novel and differentiable Voronoi-based representation of watertight 3D shape surfaces. 
-            From a set of 3D points (called generators) and their associated occupancy (inside/outside) with respect to an input shape, we define our boundary representation through the Voronoi diagram of the generators as the subset of Voronoi faces whose two equidistant generators are of opposite occupancy: the resulting polygon mesh then forms a watertight approximation of the input shape's boundary.To learn the position of the generators we propose a novel loss function that minimizes the distance from groundtruth surface samples to the closest face of the Voronoi diagram without needing an explicit construction of the entire Voronoi diagram. We demonstrate how the proposed VoroLoss applies to either direct optimization of generators, or to the training of a neural network for inference-based prediction of generators. We demonstrate the geometric efficiency of our representation compared to axiomatic meshing algorithms and recent learning-based mesh representations on the Thingi32 dataset. We also match or outperform recent methods in mesh prediction from SDF inputs on the ABC dataset, while guaranteeing closed surfaces without self-intersection.          </p>
+            From a set of 3D points (called generators) and their associated occupancy (inside/outside) with respect to an input shape, we define our boundary representation through the Voronoi diagram of the generators as the subset of Voronoi faces whose two equidistant generators are of opposite occupancy: the resulting polygon mesh then forms a watertight approximation of the input shape's boundary. To learn the position of the generators we propose a novel loss function that minimizes the distance from groundtruth surface samples to the closest face of the Voronoi diagram without needing an explicit construction of the entire Voronoi diagram. We demonstrate how the proposed VoroLoss applies to either direct optimization of generators, or to the training of a neural network for inference-based prediction of generators. We demonstrate the geometric efficiency of our representation compared to axiomatic meshing algorithms and recent learning-based mesh representations on the Thingi32 dataset. We also match or outperform recent methods in mesh prediction from SDF inputs on the ABC dataset, while guaranteeing closed surfaces without self-intersection.          </p>
         </div>
         <video controls='true' width="1920" height="1080">
-          <source src="./static/video/teaser.m4v" type="video/x-m4v">
-          <!-- <source src="./static/video/teaser.mp4"  type="video/mp4"> -->
+          <source src="./static/video/teaser.m4v" type="video/x-m4v" media="all">
+          <source src="./static/video/teaser.mp4"  type="video/mp4" media="all">
         </video>
+
       </div>
     </div>
   </div>
