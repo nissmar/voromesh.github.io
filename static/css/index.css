@@ -138,3 +138,8 @@ model-viewer {
   margin:auto;
   border-collapse:inherit;
 }
+
+
+.table .nopadding {
+  padding: 0px;
+}
