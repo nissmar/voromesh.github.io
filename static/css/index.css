@@ -2,6 +2,22 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
+model-viewer {
+  /* aspect-ratio: 1 / 1.6; */
+  height: 40vw;
+  width:100%;
+}
+
+
+/* @media only screen and (min-width: 769) {
+  model-viewer {
+    height: 30vw;
+  }
+} */
+
+.full-width {
+  width:100%;
+}
 
 .footer .icon-link {
     font-size: 25px;

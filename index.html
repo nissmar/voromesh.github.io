@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
   <meta name="description" content="DESCRIPTION META TAG">
   <meta name="google-site-verification" content="F_-hRRiFHP92CrJCmNeunMMnQe1_8_P07VCV4IPreNM" />
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
 
   <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
@@ -27,15 +28,13 @@
 
   <title>VoroMesh</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -44,7 +43,9 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
 </head>
+
 <body>
 
 
@@ -53,27 +54,32 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">VoroMesh: Learning Watertight Surface Meshes with Voronoi Diagrams</h1>
+            <h1 class="title is-1 publication-title">VoroMesh: Learning Watertight Surface Meshes with Voronoi Diagrams
+            </h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
                 <a href="https://nissmar.github.io" target="_blank">Nissim Maruani</a><sup>1</sup>, </span>
-                <span class="author-block">
-                  <a href="https://scholar.google.ru/citations?user=LzkFOcoAAAAJ&hl=ru" target="_blank">Roman Klokov</a><sup>2</sup>, </span>
-                  <span class="author-block">
-                    <a href="https://www.lix.polytechnique.fr/~maks/" target="_blank">Maks Ovsjanikov</a><sup>2</sup>,</span>
-                    <span class="author-block">
-                      <a href="https://team.inria.fr/titane/pierre-alliez/" target="_blank">Pierre Alliez</a><sup>1</sup>, </span>
-                      <span class="author-block">
-                        <a href="https://pages.saclay.inria.fr/mathieu.desbrun/" target="_blank">Mathieu Desbrun</a><sup>1,2</sup>
-                  </span>
-                  </div>
+              <span class="author-block">
+                <a href="https://scholar.google.ru/citations?user=LzkFOcoAAAAJ&hl=ru" target="_blank">Roman
+                  Klokov</a><sup>2</sup>, </span>
+              <span class="author-block">
+                <a href="https://www.lix.polytechnique.fr/~maks/" target="_blank">Maks
+                  Ovsjanikov</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="https://team.inria.fr/titane/pierre-alliez/" target="_blank">Pierre Alliez</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://pages.saclay.inria.fr/mathieu.desbrun/" target="_blank">Mathieu
+                  Desbrun</a><sup>1,2</sup>
+              </span>
+            </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block"><sup>1</sup>Inria, <sup>2</sup>École polytechnique  <br>ICCV 2023</span>
-                  </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Inria, <sup>2</sup>École polytechnique <br>ICCV 2023</span>
+            </div>
 
-                  <!-- <div class="column has-text-centered">
+            <!-- <div class="column has-text-centered">
                     <div class="publication-links">
                       <span class="link-block">
                         <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
@@ -84,21 +90,21 @@
                         <span>Paper</span>
                       </a>
                     </span> -->
-                    <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="ai ai-arxiv"></i>
-                        </span>
-                        <span>arXiv</span>
-                      </a>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
                     </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
 
-                    <!-- Supplementary PDF link -->
-                    <!-- <span class="link-block">
+                <!-- Supplementary PDF link -->
+                <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -108,9 +114,9 @@
                     </a>
                   </span> -->
 
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/nissmar/VoroMesh" target="_blank"
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/nissmar/VoroMesh" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -121,14 +127,14 @@
 
                 <!-- data -->
                 <span class="link-block">
-                  <a href="https://drive.google.com/drive/folders/17YqwcL9euCZHmsaa81eXcGDc4oePvgSN?usp=sharing" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fas fa-database"></i>
-                  </span>
-                  <span>Data</span>
-                </a>
-              </span>
+                  <a href="https://drive.google.com/drive/folders/17YqwcL9euCZHmsaa81eXcGDc4oePvgSN?usp=sharing"
+                    target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-database"></i>
+                    </span>
+                    <span>Data</span>
+                  </a>
+                </span>
 
                 <!-- ArXiv abstract Link -->
                 <!-- <span class="link-block">
@@ -140,51 +146,66 @@
                   <span>arXiv</span>
                 </a>
               </span> -->
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Teaser Image -->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-    <picture>
-      <source media="(min-width: 769px)" srcset="static/images/banner.png">
-      <source media="(max-width: 769px)" srcset="static/images/banner_mobile.png">
+  <!-- Teaser Image -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <picture>
+          <source media="(min-width: 769px)" srcset="static/images/banner.png">
+          <source media="(max-width: 769px)" srcset="static/images/banner_mobile.png">
 
-      <img src="static/images/banner.png" alt="MY ALT TEXT"/>
+          <img src="static/images/banner.png" alt="MY ALT TEXT" />
 
-    </picture>
-    </div>
-  </div>
-</section> 
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            In stark contrast to the case of images, finding a concise, learnable discrete representation of 3D surfaces remains a challenge. In particular, while polygon meshes are arguably the most common surface representation used in geometry processing, their irregular and combinatorial structure often make them unsuitable for learning-based applications. In this work, we present VoroMesh, a novel and differentiable Voronoi-based representation of water- tight 3D shape surfaces. From a set of 3D points (called generators) and their associated occupancy, we define our boundary representation through the Voronoi diagram of the generators as the subset of Voronoi faces whose two associated (equidistant) generators are of opposite occupancy: the resulting polygon mesh forms a watertight approximation of the target shape’s boundary. To learn the position of the generators, we propose a novel loss function, dubbed VoroLoss, that minimizes the distance from groundtruth surface samples to the closest faces of the Voronoi diagram which does not require an explicit construction of the entire Voronoi diagram. A direct optimization of the Voroloss to obtain generators on the Thingi32 dataset demonstrates the geometric efficiency of our representation compared to axiomatic meshing algorithms and recent learning-based mesh representations. We further use VoroMesh in a learning-based mesh prediction task from input SDF grids on the ABC dataset, and show comparable performance to state-of-the-art methods while guaranteeing closed output surfaces free of self-intersections.
-          </p>
-        </div>
-        <video controls='true' width="1920" height="1080">
-          <source src="./static/video/teaser.m4v" type="video/x-m4v" media="all">
-          <source src="./static/video/teaser.mp4"  type="video/mp4" media="all">
-        </video>
-
+        </picture>
       </div>
     </div>
-  </div>
-</section>
-<!-- 
+  </section>
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              In stark contrast to the case of images, finding a concise, learnable discrete representation of 3D
+              surfaces remains a challenge. In particular, while polygon meshes are arguably the most common surface
+              representation used in geometry processing, their irregular and combinatorial structure often make them
+              unsuitable for learning-based applications. In this work, we present VoroMesh, a novel and differentiable
+              Voronoi-based representation of water- tight 3D shape surfaces. From a set of 3D points (called
+              generators) and their associated occupancy, we define our boundary representation through the Voronoi
+              diagram of the generators as the subset of Voronoi faces whose two associated (equidistant) generators are
+              of opposite occupancy: the resulting polygon mesh forms a watertight approximation of the target shape’s
+              boundary. To learn the position of the generators, we propose a novel loss function, dubbed VoroLoss, that
+              minimizes the distance from groundtruth surface samples to the closest faces of the Voronoi diagram which
+              does not require an explicit construction of the entire Voronoi diagram. A direct optimization of the
+              Voroloss to obtain generators on the Thingi32 dataset demonstrates the geometric efficiency of our
+              representation compared to axiomatic meshing algorithms and recent learning-based mesh representations. We
+              further use VoroMesh in a learning-based mesh prediction task from input SDF grids on the ABC dataset, and
+              show comparable performance to state-of-the-art methods while guaranteeing closed output surfaces free of
+              self-intersections.
+            </p>
+          </div>
+          <video controls='true' width="1920" height="1080">
+            <source src="./static/video/teaser.m4v" type="video/x-m4v" media="all">
+            <source src="./static/video/teaser.mp4" type="video/mp4" media="all">
+          </video>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 
 <!DOCTYPE html>
 <html>
   <head>
@@ -201,116 +222,168 @@
 
 
 <!-- Direct optim -->
-<section class="section">
-  <div class="container is-max-desktop is-four-fifths">
-    <div class="container">
-    <h2 class="title is-3">Direct Optimization (Thingi32 dataset)</h2>
-    <table class="table">
-      <tr>
-        <td><img class="tabimg" src="static/images/direct/32_dino.jpeg" alt="Image 1"></td>
-        <td><img class="tabimg" src="static/images/direct/64_dino.jpeg" alt="Image 2"></td>
-        <td><img class="tabimg" src="static/images/direct/128_dino.jpeg" alt="Image 2"></td>
-        <td><img class="tabimg" src="static/images/direct/dino.jpeg" alt="Image 2"></td>
+  <section class="section">
+    <div class="container is-max-desktop is-four-fifths">
+      <h2 class="title is-3">Direct Optimization (Thingi32 dataset)</h2>
+      <table class="table full-width"> 
+        <!-- is-hidden-mobile  -->
+        <tr>
+            <td><model-viewer alt="mesh" src="static/meshes/statue_small.glb" ar shadow-intensity="1"
+                camera-controls touch-action="pan-y" poster="static/meshes/statue_small_poster.wbp"></model-viewer></td>
+            <td><model-viewer alt="mesh" src="static/meshes/statue.glb" ar shadow-intensity="1"
+                camera-controls touch-action="pan-y" poster="static/meshes/statue_poster.wbp"></model-viewer></td>
+            <td><model-viewer alt="mesh"  src="static/meshes/statue_ref.glb" ar shadow-intensity="1"
+                camera-controls touch-action="pan-y" poster="static/meshes/statue_ref_poster.wbp"></model-viewer>
+          </div>
+        </tr>
+        <tr>
+          <td><model-viewer alt="mesh" src="static/meshes/gargoyle_small.glb" ar shadow-intensity="1"
+              camera-controls touch-action="pan-y" poster="static/meshes/gargoyle_small_poster.webp"></model-viewer></td>
+          <td><model-viewer alt="mesh" src="static/meshes/gargoyle.glb" ar shadow-intensity="1"
+              camera-controls touch-action="pan-y" poster="static/meshes/gargoyle_poster.webp"></model-viewer></td>
+          <td><model-viewer alt="mesh"  src="static/meshes/gargoyle_norm.glb" ar shadow-intensity="1"
+              camera-controls touch-action="pan-y" poster="static/meshes/gargoyle_norm_poster.webp"></model-viewer>
+        </div>
       </tr>
-      <tr>
-        <td><img class="tabimg" src="static/images/direct/32_lucy.jpeg" alt="Image 1"></td>
-        <td><img class="tabimg" src="static/images/direct/64_lucy.jpeg" alt="Image 2"></td>
-        <td><img class="tabimg" src="static/images/direct/128_lucy.jpeg" alt="Image 2"></td>
-        <td><img class="tabimg" src="static/images/direct/lucy.jpeg" alt="Image 2"></td>
-      </tr>
-      <tr>
-        <td><img class="tabimg" src="static/images/direct/32_gargoyle.jpeg" alt="Image 1"><h2 class="subtitle has-text-centered">VoroMesh (32)</h2></td>
-        <td><img class="tabimg" src="static/images/direct/64_gargoyle.jpeg" alt="Image 2"><h2 class="subtitle has-text-centered">VoroMesh (64)</h2></td>
-        <td><img class="tabimg" src="static/images/direct/128_gargoyle.jpeg" alt="Image 2"><h2 class="subtitle has-text-centered">VoroMesh (128)</h2></td>
-        <td><img class="tabimg" src="static/images/direct/gargoyle.jpeg" alt="Image 2"><h2 class="subtitle has-text-centered">Ground Truth</h2></td>
-      </tr>
-    </table>
-  </div>
-</div>
-</section>
+        <tr>
+          <td>
+            <h2 class="subtitle has-text-centered">VoroMesh (32)</h2>
+          </td>
+          <td>
+            <h2 class="subtitle has-text-centered">VoroMesh (128)</h2>
+          </td>
+          <td>
+            <h2 class="subtitle has-text-centered">Ground Truth</h2>
+          </td>
+        </tr>
+      </table>
+      
+      <!-- <table class="table is-hidden-desktop">
+        <tr>
+          <td><img class="tabimg" src="static/images/direct/32_dino.jpeg" alt="Image 1"></td>
+          <td><img class="tabimg is-hidden-mobile" media="(min-width: 769px)" src="static/images/direct/64_dino.jpeg"
+              alt="Image 2"></td>
+          <td><img class="tabimg" src="static/images/direct/128_dino.jpeg" alt="Image 2"></td>
+          <td><img class="tabimg" src="static/images/direct/dino.jpeg" alt="Image 2"></td>
+        </tr>
+        <tr>
+          <td><img class="tabimg" src="static/images/direct/32_lucy.jpeg" alt="Image 1"></td>
+          <td><img class="tabimg is-hidden-mobile" src="static/images/direct/64_lucy.jpeg" alt="Image 2"></td>
+          <td><img class="tabimg" src="static/images/direct/128_lucy.jpeg" alt="Image 2"></td>
+          <td><img class="tabimg" src="static/images/direct/lucy.jpeg" alt="Image 2"></td>
+        </tr>
+        <tr>
+          <td><img class="tabimg" src="static/images/direct/32_gargoyle.jpeg" alt="Image 1">
+            <h2 class="subtitle has-text-centered">VoroMesh (32)</h2>http://127.0.0.1:3000/static/images/learning/1ours.jpeg
+          </td>
+          <td><img class="tabimg is-hidden-mobile" src="static/images/direct/64_gargoyle.jpeg" alt="Image 2">
+            <h2 class="subtitle has-text-centered is-hidden-mobile">VoroMesh (64)</h2>
+          </td>
+          <td><img class="tabimg" src="static/images/direct/128_gargoyle.jpeg" alt="Image 2">
+            <h2 class="subtitle has-text-centered">VoroMesh (128)</h2>
+          </td>
+          <td><img class="tabimg" src="static/images/direct/gargoyle.jpeg" alt="Image 2">
+            <h2 class="subtitle has-text-centered">Ground Truth</h2>
+          </td>
+        </tr>
+      </table> -->
+    </div>
+  </section>
 
 
+  <!-- Learning ABC -->
+  <!-- <section class="section">
+    <div class="container is-max-desktop is-four-fifths">
+      <div class="container">
+      <h2 class="title is-3">Learning Pipeline</h2>
+     <img class="tabimg" src="static/images/CNN3.svg" alt="Image 1" style="width: 50%; height: 100%;">
+    </div>
+    </div>
+  </section> -->
 
+  <!-- Learning ABC -->
+  <section class="section">
+    <div class="container is-max-desktop is-four-fifths">
+      <h2 class="title is-3">Learning-based reconstruction (ABC dataset)</h2>
+      <table class="table">
+        <tr>
+          <td><img class="tabimg is-hidden-mobile" src="static/images/learning/84NDC.jpeg" alt="Image 1"></td>
+          <td><img class="tabimg is-hidden-mobile" src="static/images/learning/84NMC.jpeg" alt="Image 2"></td>
+          <td><img class="tabimg" src="static/images/learning/84ours.jpeg" alt="Image 2"></td>
+          <td><img class="tabimg" src="static/images/learning/84gt.jpeg" alt="Image 2"></td>
+        </tr>
+        <tr>
+          <td><img class="tabimg is-hidden-mobile" src="static/images/learning/1NDC.jpeg" alt="Image 1">
+            <h2 class="subtitle has-text-centered is-hidden-mobile">NDC</h2>
+          </td>
+          <td><img class="tabimg is-hidden-mobile" src="static/images/learning/1NMC.jpeg" alt="Image 2">
+            <h2 class="subtitle has-text-centered is-hidden-mobile">NMC</h2>
+          </td>
+          <td><img class="tabimg" src="static/images/learning/1ours.jpeg" alt="Image 2">
+            <h2 class="subtitle has-text-centered">VoroMesh</h2>
+          </td>
+          <td><img class="tabimg" src="static/images/learning/1gt.jpeg" alt="Image 2">
+            <h2 class="subtitle has-text-centered">Ground Truth</h2>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </section>
 
-<!-- Learning ABC -->
-<!-- <section class="section">
-  <div class="container is-max-desktop is-four-fifths">
-    <div class="container">
-    <h2 class="title is-3">Learning Pipeline</h2>
-   <img class="tabimg" src="static/images/CNN3.svg" alt="Image 1" style="width: 5°0%; height: 100%;">
-  </div>
-  </div>
-</section> -->
+  <!--Acknowledgment citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Acknowledgements</h2>
+      <div class="content has-text-justified">
+        <p>
+          Nissim Maruani and Pierre Alliez are supported by the French government, through the 3IA Côte d'Azur
+          Investments in the Future project managed by the National Research Agency (ANR) with the reference number
+          ANR-19-P3IA-0002. Maks Ovsjanikov and Roman Klokov acknowledge ERC Starting Grant No. 758800 (EXPROTEA) and
+          the ANR AI Chair AIGRETTE. Mathieu Desbrun acknowledges the generous support of Ansys and Adobe Research, as
+          well as a Choose France Inria chair.
+      </div>
+    </div>
+  </section>
 
-
-
-<!-- Learning ABC -->
-<section class="section">
-  <div class="container is-max-desktop is-four-fifths">
-    <div class="container">
-    <h2 class="title is-3">Learning-based reconstruction (ABC dataset)</h2>
-    <table class="table">
-      <tr>
-        <td><img class="tabimg" src="static/images/learning/84NDC.jpeg" alt="Image 1"></td>
-        <td><img class="tabimg" src="static/images/learning/84NMC.jpeg" alt="Image 2"></td>
-        <td><img class="tabimg" src="static/images/learning/84ours.jpeg" alt="Image 2"></td>
-        <td><img class="tabimg" src="static/images/learning/84gt.jpeg" alt="Image 2"></td>
-      </tr>
-      <tr>
-        <td><img class="tabimg" src="static/images/learning/1NDC.jpeg" alt="Image 1"><h2 class="subtitle has-text-centered">NDC</h2></td>
-        <td><img class="tabimg" src="static/images/learning/1NMC.jpeg" alt="Image 2"><h2 class="subtitle has-text-centered">NMC</h2></td>
-        <td><img class="tabimg" src="static/images/learning/1ours.jpeg" alt="Image 2"><h2 class="subtitle has-text-centered">VoroMesh</h2></td>
-        <td><img class="tabimg" src="static/images/learning/1gt.jpeg" alt="Image 2"><h2 class="subtitle has-text-centered">Ground Truth</h2></td>
-      </tr>
-    </table>
-  </div>
-</section>
-
-<!--Acknowledgment citation -->
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">Acknowledgements</h2>
-    <div class="content has-text-justified">
-      <p>
-        Nissim Maruani and Pierre Alliez are supported by the French government, through the 3IA Côte d'Azur Investments in the Future project managed by the National Research Agency (ANR) with the reference number ANR-19-P3IA-0002. Maks Ovsjanikov and Roman Klokov acknowledge ERC Starting Grant No. 758800 (EXPROTEA) and the ANR AI Chair AIGRETTE. Mathieu Desbrun acknowledges the generous support of Ansys and Adobe Research, as well as a Choose France Inria chair.    </div>
-  </div>
-</section>
-
-<!--BibTex citation -->
+  <!--BibTex citation -->
   <!-- <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>BibTex Code Here</code></pre>
     </div>
 </section> -->
-<!--End BibTex citation -->
+  <!--End BibTex citation -->
 
 
   <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
 
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a>.
+              You are free to borrow the of this website, we just ask that you link back to this page in the footer.
+              <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
 
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+  <!-- Statcounter tracking code -->
 
-    <!-- End of Statcounter Code -->
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
-  </body>
-  </html>
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
